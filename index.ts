@@ -2,6 +2,7 @@ import type { Plugin as VitePlugin } from "vite";
 import { resolve } from 'path'
 
 export interface ScalaJSMillPluginOptions {
+  cwd?: string,
   moduleNames?: string;
   taskName?: string;
 }
@@ -9,7 +10,7 @@ export interface ScalaJSMillPluginOptions {
 export default function scalaJSMillPlugin(
   options: ScalaJSMillPluginOptions = {}
 ): VitePlugin {
-  const { moduleNames, taskName } = options;
+  const { cwd, moduleNames, taskName } = options;
 
   const URIPrefix = 'scalajs:';
 
@@ -34,11 +35,16 @@ export default function scalaJSMillPlugin(
           taskDest = `${taskName}.dest`
         }
 
-        const paths = ["out"]
+        const paths = []
+        if (cwd) {
+          paths.push(cwd)
+        }
+
+        paths.push("out")
+
         if (moduleNames) {
           paths.push(moduleNames)
         }
-
 
         paths.push(taskDest)
 
