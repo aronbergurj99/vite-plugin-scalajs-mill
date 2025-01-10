@@ -1,17 +1,41 @@
 {
   "name": "vite-plugin-scalajs-mill",
   "version": "1.0.0",
-  "description": "Vite scalajs mill support",
+  "description": "Vite plugin for integration of Scala.js and Mill build system",
   "main": "dist/index.js",
-
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aronbergurj99/vite-plugin-scalajs-mill"
+  },
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "scala",
+    "scala-js"
+  ],
+  "contributors": [
+    {
+      "name": "Aron Bergur Johannsson",
+      "url": "https://github.com/aronbergurj99"
+    },
+  ],
   "author": "Aron Bergur Johannsson",
-  "license": "ISC",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/aronbergurj99/vite-plugin-scalajs-mill/issues"
+  },
+  "homepage": "https://github.com/aronbergurj99/vite-plugin-scalajs-mill#readme",
+  "dependencies": {
+    "vite": "^4.1.4"
+  },
   "devDependencies": {
-    "@types/node": "^22.10.5",
-    "typescript": "^5.7.3",
-    "vite": "^6.0.7"
-  }
+    "@types/node": "^18.14.2",
+    "typescript": "4.9.5"
+  },
+  "type": "module",
+  "files": ["dist", "LICENSE", "README.md", "package.json"]
 }
