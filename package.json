@@ -1,0 +1,17 @@
+{
+  "name": "vite-plugin-scalajs-mill",
+  "version": "1.0.0",
+  "description": "Vite scalajs mill support",
+  "main": "dist/index.js",
+
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "Aron Bergur Johannsson",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7"
+  }
+}
